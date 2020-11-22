@@ -646,46 +646,77 @@
       <div class="modal">modal</div>
     </div>
 
-    <!-- Modal window -->
+    <!-- Modal window ============================================ -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn-close" data-modal-close>X</button>
-        <form action="#" method="GET" class="contact-form">
+        <form class="contact-form" action="#" method="GET">
           <p class="contact-form-title">
             Оставьте свои данные, мы вам перезвоним
           </p>
-
-          <section class="contact-form-input-section">
-            <input
-              type="text"
-              class="contact-form-input"
-              name="user-name"
-              placeholder="Имя"
-              required
-              minlength="2"
-            />
-            <input
-              type="tel"
-              class="contact-form-input"
-              name="user-phone"
-              placeholder="Телефон"
-              required
-            />
-            <!-- pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" -->
-            <input
-              type="email"
-              class="contact-form-input"
-              name="user-email"
-              placeholder="Почта"
-              required
-            />
-
-            <textarea
-              class="contact-form-input contact-form-message"
-              name="user-comments"
-              placeholder="Комментарий"
-            >
-            </textarea>
+<!-- Inputs ===================== -->
+          <div>
+            <!-- Name -->
+            <label
+              >Имя
+              <svg
+            class="contact-form-input-svg"
+             >
+               <use href="./images/sprite.svg#person-black"></use>
+             </svg>
+              <input
+                type="text"
+                class="contact-form-input"
+                name="user-name"
+                required
+                minlength="2"
+                placeholder=""
+              />
+            </label>
+            <!-- Phone -->
+            <label
+              >Телефон
+              <svg
+             class="contact-form-input-svg"
+              >
+                <use href="./images/sprite.svg#pnone-black"></use>
+              </svg>
+              <input
+                type="tel"
+                class="contact-form-input"
+                name="user-phone"
+                required
+                minlength="7"
+                placeholder=""
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                />
+            </label>
+           <!-- E-mail -->
+            <label
+              >Почта
+              <svg
+            class="contact-form-input-svg"
+             >
+               <use href="./images/sprite.svg#email-black"></use>
+             </svg>
+              <input
+                id="email"
+                type="email"
+                class="contact-form-input"
+                name="user-email"
+                placeholder=""
+                required
+              />
+            </label>
+            <!-- Комментарий -->
+            <label
+              >Комментарий
+              <textarea
+                class="contact-form-input contact-form-message"
+                name="user-comments"
+                placeholder="Введите текст"
+              ></textarea>
+            </label>
           </section>
 
           <!--Agreement section  ============================== -->
@@ -703,13 +734,17 @@
             <a class="contact-form-agreement-license link hover focus" href="#"
               >Условия договора</a
             >
-          </section>
+          </div>
 
           <button type="submit" class="contact-form-button">Отправить</button>
         </form>
       </div>
     </div>
-    <!-- Modal script -->
+
+    <!-- Modal script ====================================== -->
     <script src="./JS/modal.js"></script>
+
+
+  
   </body>
 </html>

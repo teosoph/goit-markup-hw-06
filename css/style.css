@@ -75,7 +75,6 @@ img {
 }
 section {
   margin: 0 auto;
-  /* border: 3px solid #ff0000; */
   width: 100%;
 }
 
@@ -102,8 +101,6 @@ section {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-
-  /* border: 3px solid #00ff37; */
 }
 /* .flex-container {
   display: flex;
@@ -111,7 +108,6 @@ section {
 
 /* HEADER =====================================*/
 header {
-  /* border: 3px solid #1900ff; */
   border: 1px solid #ececec;
 }
 
@@ -328,54 +324,6 @@ main {
 .hero-button:focus {
   background-color: var(--background-color);
   color: var(--accent-color);
-}
-
-/* Backdrop ================================================= */
-.backdrop {
-  position: fixed;
-  z-index: 100;
-  opacity: 1;
-
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: all 0.5s ease-in;
-}
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
-}
-.modal {
-  position: absolute;
-  z-index: 100;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%) scale(1);
-
-  width: 528px;
-  height: 581px;
-
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-
-  transition: transform 0.5s;
-}
-
-.modal-btn-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
 }
 
 /*  Section 2  Merits =======================*/
@@ -916,6 +864,68 @@ footer .logo-link span {
   margin-left: 10px;
 }
 
+/* Modal window ========================= */
+.modal label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgb(117, 117, 117);
+
+  margin-bottom: 10px;
+}
+
+/* Backdrop ================================================= */
+.backdrop {
+  position: fixed;
+  z-index: 100;
+  opacity: 1;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in;
+}
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+/* Modal window ======================== */
+.modal {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 528px;
+  height: 581px;
+
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform 0.5s;
+}
+.modal-btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
 /* FORM ============================= */
 .contact-form {
   width: 528px;
@@ -926,11 +936,8 @@ footer .logo-link span {
 
   outline: 1px solid black;
 }
-/* Input section ========================== */
 
-.contact-form-input-section {
-  padding-bottom: 20px;
-}
+/* Input section ========================== */
 .contact-form-title {
   text-align: center;
 
@@ -946,17 +953,30 @@ footer .logo-link span {
 
   width: 100%;
   height: 40px;
-  padding-left: 19px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  z-index: 1;
 }
 .contact-form-input:not(:last-child) {
   margin-bottom: 28px;
 }
 .contact-form-message {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+
   width: 100%;
   height: 120px;
+  padding-left: 16px;
+  padding-top: 12px;
+
   resize: none;
 }
 
@@ -964,17 +984,17 @@ footer .logo-link span {
 .contact-form-input:hover {
   outline: none;
 }
-
-/* .contact-form-input::before {
-  content: "";
-  display: block;
-  background-image: url(../images/footer/icon-send.svg);
-  width: 24px;
-  height: 24px;
-  background-repeat: no-repeat;
-
-  margin-left: 10px;
-} */
+.contact-form label {
+  position: relative;
+}
+.contact-form-input-svg {
+  position: absolute;
+  top: 25px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  z-index: 100;
+}
 
 /* Agreement section  ==============================*/
 .contact-form-agreement-section {
