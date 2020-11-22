@@ -479,7 +479,7 @@ main {
 .team-list-teammate-social-list-item-link-svg {
   width: 44px;
   height: 44px;
-  fill: #afb1b8;
+  fill: rgb(175, 177, 184);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-list-teammate-social-list-item a {
@@ -681,8 +681,6 @@ footer {
 
   background: #2f303a;
   height: 252px;
-
-  /* border: 3px solid #1900ff; */
 }
 footer .container {
   display: flex;
@@ -938,6 +936,7 @@ footer .logo-link span {
 }
 
 /* Input section ========================== */
+/* Title */
 .contact-form-title {
   text-align: center;
 
@@ -948,6 +947,11 @@ footer .logo-link span {
 
   margin-bottom: 30px;
 }
+/* Label ==========================================*/
+.contact-form-label {
+  position: relative;
+}
+/* Inputs =========================================== */
 .contact-form-input {
   display: block;
 
@@ -960,8 +964,15 @@ footer .logo-link span {
   z-index: 1;
 }
 .contact-form-input:not(:last-child) {
-  margin-bottom: 28px;
+  /* margin-bottom: 28px; */
 }
+.contact-form-input:focus,
+.contact-form-input:hover {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+/* Message ========================================== */
 .contact-form-message {
   font-family: Roboto;
   font-style: normal;
@@ -980,12 +991,10 @@ footer .logo-link span {
   resize: none;
 }
 
-.contact-form-input:focus,
-.contact-form-input:hover {
-  outline: none;
-}
-.contact-form label {
-  position: relative;
+/* Inputs icons ================================= */
+.contact-form-input:focus + .contact-form-input-svg,
+.contact-form-input:hover + .contact-form-input-svg {
+  fill: var(--accent-color);
 }
 .contact-form-input-svg {
   position: absolute;
@@ -996,8 +1005,8 @@ footer .logo-link span {
   z-index: 100;
 }
 
-/* Agreement section  ==============================*/
-.contact-form-agreement-section {
+/* Agreements  ==============================*/
+.contact-form-agreement {
   display: flex;
 
   font-family: Roboto;
