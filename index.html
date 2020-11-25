@@ -619,8 +619,8 @@
         </div>
 
         <!-- subscription ===========================================-->
-        <div hidden class="footer-subscription">
-          <p class="footer-connections-title-2">Подпишитесь на рассылку</p>
+        <div  class="footer-subscription">
+          <p class="footer-subscription-title">Подпишитесь на рассылку</p>
 
           <form class="footer-subscription-form" action="#" method="GET">
             <section class="footer-contact-form-section">
@@ -649,7 +649,10 @@
     <!-- Modal window ============================================ -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-btn-close" data-modal-close>X</button>
+        <button class="modal-btn-close" data-modal-close>
+ <svg class="modal-btn-close__icon-x">
+                  <use href="./images/sprite.svg#vector-x"></use>
+                </svg>        </button>
         <form class="contact-form" action="#" method="GET">
           <p class="contact-form-title">
             Оставьте свои данные, мы вам перезвоним
@@ -661,11 +664,6 @@
             <label             class="contact-form-label"
 
               >Имя
-              <svg
-            class="contact-form-input-svg"
-             >
-               <use href="./images/sprite.svg#person-black"></use>
-             </svg>
               <input
                 type="text"
                 class="contact-form-input"
@@ -674,15 +672,15 @@
                 minlength="2"
                 placeholder=""
               />
+              <svg
+            class="contact-form-input-svg"
+             >
+               <use href="./images/sprite.svg#person-black"></use>
+             </svg>
             </label>
             <!-- Phone -->
             <label class="contact-form-label"
               >Телефон
-              <svg
-             class="contact-form-input-svg"
-              >
-                <use href="./images/sprite.svg#pnone-black"></use>
-              </svg>
               <input
                 type="tel"
                 class="contact-form-input"
@@ -692,15 +690,15 @@
                 placeholder=""
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
                 />
+              <svg
+             class="contact-form-input-svg"
+              >
+                <use href="./images/sprite.svg#pnone-black"></use>
+              </svg>
             </label>
            <!-- E-mail -->
             <label class="contact-form-label"
               >Почта
-              <svg
-            class="contact-form-input-svg"
-             >
-               <use href="./images/sprite.svg#email-black"></use>
-             </svg>
               <input
                 id="email"
                 type="email"
@@ -709,6 +707,11 @@
                 placeholder=""
                 required
               />
+              <svg
+            class="contact-form-input-svg"
+             >
+               <use href="./images/sprite.svg#email-black"></use>
+             </svg>
             </label>
             <!-- Message =====================================-->
             <label

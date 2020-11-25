@@ -830,7 +830,7 @@ footer .logo-link span {
   left: 1184px;
   top: 1736px;
 
-  background: #2196f3;
+  background: rgb(33, 150, 243);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
@@ -839,14 +839,12 @@ footer .logo-link span {
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 
   display: flex;
   align-items: center;
 
   padding-left: 10px;
-
-  display: none;
 }
 .footer-button-tosign p {
   margin-right: 10px;
@@ -860,20 +858,6 @@ footer .logo-link span {
   background-repeat: no-repeat;
 
   margin-left: 10px;
-}
-
-/* Modal window ========================= */
-.modal label {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.01em;
-
-  color: rgb(117, 117, 117);
-
-  margin-bottom: 10px;
 }
 
 /* Backdrop ================================================= */
@@ -919,11 +903,46 @@ footer .logo-link span {
 
   transition: transform 0.5s;
 }
+.modal label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgb(117, 117, 117);
+
+  margin-bottom: 10px;
+}
 .modal-btn-close {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   top: 8px;
   right: 8px;
+
+  width: 30px;
+  height: 30px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  cursor: pointer;
 }
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.modal-btn-close__icon-x {
+  height: 11px;
+  width: 11px;
+}
+
 /* FORM ============================= */
 .contact-form {
   width: 528px;
@@ -932,9 +951,8 @@ footer .logo-link span {
   margin: 0 auto;
   padding: 40px 40px;
 
-  outline: 1px solid black;
+  outline: 1px solid rgb(0, 0, 0);
 }
-
 /* Input section ========================== */
 /* Title */
 .contact-form-title {
@@ -945,7 +963,7 @@ footer .logo-link span {
   font-size: 20px;
   letter-spacing: 0.03em;
 
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 /* Label ==========================================*/
 .contact-form-label {
@@ -964,7 +982,7 @@ footer .logo-link span {
   z-index: 1;
 }
 .contact-form-input:not(:last-child) {
-  /* margin-bottom: 28px; */
+  margin-bottom: 10px;
 }
 .contact-form-input:focus,
 .contact-form-input:hover {
@@ -989,6 +1007,8 @@ footer .logo-link span {
   padding-top: 12px;
 
   resize: none;
+
+  margin-bottom: 20px;
 }
 
 /* Inputs icons ================================= */
@@ -1020,20 +1040,21 @@ footer .logo-link span {
   margin-right: 6px;
 }
 .contact-form-agreement-section p {
-  color: #757575;
+  color: rgb(117, 117, 117);
   margin-right: 3px;
 }
-.contact-form-agreement-section a {
-  color: #2196f3;
+.contact-form-agreement a {
+  color: rgb(33, 150, 243);
+  text-decoration: underline;
 }
 
 .contact-form-button {
-  background-color: #2196f3;
+  background-color: rgb(33, 150, 243);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: bold;
   font-size: 16px;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 
   width: 200px;
   height: 50px;
