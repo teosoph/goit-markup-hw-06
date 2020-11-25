@@ -1036,10 +1036,20 @@ footer .logo-link span {
 
   padding-bottom: 30px;
 }
-.contact-form-agreement-section input {
+
+.contact-form-agreement__check-box {
+  position: relative;
   margin-right: 6px;
 }
-.contact-form-agreement-section p {
+.check-box__vector-x {
+  position: absolute;
+}
+.check-box__vector-y {
+  position: absolute;
+  height: 11px;
+  width: 8px;
+}
+.contact-form-agreement p {
   color: rgb(117, 117, 117);
   margin-right: 3px;
 }
